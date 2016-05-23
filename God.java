@@ -4,6 +4,9 @@
 public class God extends Entity{
     public God(){
         super();
+        dialogue = new GodDialogue();
     }
+    public void conversation(){
 
+    }
 }

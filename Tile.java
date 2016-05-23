@@ -12,6 +12,22 @@ public abstract class Tile {
         return entityList;
     }
     public Entity getEntity(int index) throws ArrayIndexOutOfBoundsException{
+        if(index == -1){
+            System.out.println("Invalid");
+        }
         return entityList.get(index);
+    }
+    public Entity getEntity(String name){
+        return getEntity(getIndex(name));
+    }
+    public int getIndex(String s){
+        int rVal = -1;
+        for(int i = 0; i < entityList.size(); i++){
+            if(entityList.get(i).getName().equals(s)){
+                rVal = i;
+                break;
+            }
+        }
+        return rVal;
     }
 }

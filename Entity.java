@@ -20,4 +20,8 @@ public abstract class Entity {
     public void setQuestStage(int a){
         questStage = a;
     }
+    public String getName(){
+        return name;
+    }
+    public abstract void conversation();
 }
