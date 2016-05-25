@@ -16,4 +16,9 @@ public abstract class Dialogue extends ArrayList<String[]> {
     public String[] getOptions(int index) throws ArrayIndexOutOfBoundsException{
         return options.get(index);
     }
+    protected void addArray(ArrayList<String[]> arr, String[][] d){
+        for(int i = 0; i < d.length; i++){
+            arr.add(d[i]);
+        }
+    }
 }

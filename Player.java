@@ -4,7 +4,8 @@ import java.util.ArrayList;
  * Created by Chris on 5/21/2016.
  */
 public class Player {
-    ArrayList<Item> inventory;
+    private ArrayList<Item> inventory;
+    private Tile currentTile;
     public Player(){
         inventory = new ArrayList<Item>();
     }
@@ -20,5 +21,14 @@ public class Player {
                 break;
             }
         }
+    }
+    public ArrayList<Item> getInventory(){
+        return inventory;
+    }
+    public void setCurrentTile(Tile t){
+        currentTile = t;
+    }
+    public Tile getCurrentTile(){
+        return currentTile;
     }
 }
